@@ -6,6 +6,9 @@ pub mod slice_tests;
 #[cfg(test)]
 pub mod vec_tests;
 
+#[cfg(test)]
+pub mod string_tests;
+
 
 
 

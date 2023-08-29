@@ -1,6 +1,6 @@
 #![allow(dead_code, unused_variables, unused)]
 use std::{
-    iter::{Filter, Map},
+    iter::{repeat, Filter, Map},
     slice::Iter,
 };
 
@@ -10,6 +10,20 @@ fn how_to_find_mut_in_vec() {
     let target = v.iter_mut().find(|n| **n == 2);
     target.map(|t| *t = 6);
     assert_eq!(v, [1, 6, 3, 4, 5]);
+}
+
+#[test]
+fn repeat_forever() {
+    let s = "repeat task";
+    let repeat_times_for_custom = 3;
+    let repeat: Vec<String> = repeat(s)
+        .zip((0..repeat_times_for_custom))
+        .map(|(s, i)| format!("{}. {s}", i + 1))
+        .collect();
+    assert_eq!(
+        repeat,
+        ["1. repeat task", "2. repeat task", "3. repeat task",]
+    );
 }
 
 #[test]
