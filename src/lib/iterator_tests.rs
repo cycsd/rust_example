@@ -52,7 +52,7 @@ fn traverse_iter() {
 /// a: Filter
 /// b: Map
 ///
-///```compile_fail
+/// ```compile_fail
 ///     let source = vec![1,2,3,4,5,6];
 
 ///     (0..source.len())
@@ -62,7 +62,7 @@ fn traverse_iter() {
 ///                 _=>src.map(|n|n+1),
 ///             }
 ///     });
-///```
+/// ```
 /// you can use .collect() parse iterator to vec
 ///
 /// and you can have the same type Vec<_>
