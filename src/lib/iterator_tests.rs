@@ -25,6 +25,15 @@ fn repeat_forever() {
         ["1. repeat task", "2. repeat task", "3. repeat task",]
     );
 }
+#[test]
+fn reverse_enumerate_index() {
+    let mut v = [1, 2, 3, 4, 5];
+    let rev_first: Vec<(usize, i32)> = v.into_iter().rev().enumerate().collect();
+    assert_eq!(rev_first, [(0, 5), (1, 4), (2, 3), (3, 2), (4, 1)]);
+
+    let rev_enum_first: Vec<(usize, i32)> = v.into_iter().enumerate().rev().collect();
+    assert_eq!(rev_enum_first, [(4, 5), (3, 4), (2, 3), (1, 2), (0, 1)]);
+}
 
 #[test]
 fn traverse_monad_iter() {

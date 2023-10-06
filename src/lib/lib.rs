@@ -1,3 +1,6 @@
+
+#[cfg(test)]
+pub mod number;
 #[cfg(test)]
 pub mod iterator_tests;
 #[cfg(test)]
