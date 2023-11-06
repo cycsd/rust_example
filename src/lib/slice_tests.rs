@@ -36,17 +36,17 @@ pub fn split_at_element() {
 }
 
 ///https://github.com/rust-lang/rust/issues/102451
-/// 
+///
 ///nth_element
-/// 
+///
 ///will mutate original source
-/// 
+///
 ///and return mut reference
-/// 
+///
 ///left (before index, and all elements <= index_value)
-/// 
+///
 ///index_value (this value will be the kth element in order)
-/// 
+///
 ///right (after index, and all elements >= index_value)
 #[test]
 pub fn select_nth_unstable() {

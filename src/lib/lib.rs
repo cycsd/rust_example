@@ -15,6 +15,9 @@ pub mod string_tests;
 #[cfg(test)]
 pub mod heap_tests;
 
+#[cfg(test)]
+pub mod smart_pointer;
+
 
 
 
