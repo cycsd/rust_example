@@ -18,6 +18,8 @@ pub mod heap_tests;
 #[cfg(test)]
 pub mod smart_pointer;
 
+pub mod dessign_pattern;
+
 
 
 

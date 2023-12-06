@@ -5,6 +5,11 @@ use std::{
 };
 
 #[test]
+fn range_start_to_end() {
+    let res = (100..0).min();
+    assert_eq!(res, None);
+}
+#[test]
 fn how_to_find_mut_in_vec() {
     let mut v = [1, 2, 3, 4, 5];
     let target = v.iter_mut().find(|n| **n == 2);
